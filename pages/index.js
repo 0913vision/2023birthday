@@ -2,8 +2,8 @@ export default function Home() {
   return (
     <>
       <div className="bg-[#330000] text-white min-h-screen font-noto-sans">
-        <div className="container mx-auto px-4">
-          {/* Section 1: Title */}
+        <div>
+          {/* Section 1: Title */}git 
           <div className="border-2 border-white p-4 my-4">
             <h1 className="text-2xl">Section Title</h1>
           </div>
