@@ -18,8 +18,6 @@ export default function Welcome() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const secretName = process.env.NEXT_PUBLIC_SECRET_NAME; // Replace with the actual secret name
-    console.log(secretName);
     const trimmedName = name.trim();
     if (trimmedName.length === 0) {
       alert('Please enter a valid name.');
@@ -35,7 +33,7 @@ export default function Welcome() {
 
   const handleConfirm = () => {
     const secretName = process.env.NEXT_PUBLIC_SECRET_NAME; // Replace with the actual secret name
-    console.log(secretName);
+    //console.log(secretName);
 
     // Save the name in the browser's localStorage
     localStorage.setItem('userName', name);
