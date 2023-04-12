@@ -7,3 +7,38 @@
   @apply font-sans;
   font-family: 'Noto Sans', sans-serif;
 }
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typing-animation {
+  overflow: hidden;
+  white-space:nowrap;
+  display: inline-block;
+  animation: typing 1.5s steps(40, end) 1s forwards;
+  animation-fill-mode: backwards;
+}
+
+.dissolve {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.dissolve.show {
+  opacity: 1;
+}
+
+.dissolveModal {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.dissolveModal.show {
+  opacity: 1;
+}
+
