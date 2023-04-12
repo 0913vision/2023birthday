@@ -45,3 +45,8 @@
     width: auto;
   }
 }
+
+.body{
+  background-color: black;
+  color: white;
+}
