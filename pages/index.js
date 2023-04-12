@@ -20,29 +20,35 @@ export default function Welcome() {
     e.preventDefault();
     const trimmedName = name.trim();
     if (trimmedName.length === 0) {
-        alert('Please enter a valid name.');
-        return;
+      alert('Please enter a valid name.');
+      return;
     
     }
     else {
-        setName(trimmedName);
+      setName(trimmedName);
     }
     setShowModal(true);
     setTimeout(() => setModalDissolve(true), 50);
   };
 
   const handleConfirm = () => {
+    const secretName = process.env.NEXT_PUBLIC_SECRET_NAME; // Replace with the actual secret name
+
     // Save the name in the browser's localStorage
     localStorage.setItem('userName', name);
 
-    // Navigate to the Home page
-    router.push('/home');
+    // Navigate to the Home page or the secret page depending on the entered name
+    if (name === secretName) {
+      router.push('/secret_home_0415');
+    } else {
+      router.push('/home');
+    }
   };
 
   return (
     <div className="bg-[#53001c] text-white min-h-screen flex items-center justify-center`">
       <div className={`container mx-auto px-10 w-full max-w-md ${dissolve ? 'dissolve show' : 'dissolve'}`}>
-        <h1 className="text-2xl mb-4">Enter your name</h1>
+        <h1 className="text-2xl mb-4">Enter your name to Login</h1>
         <form onSubmit={handleSubmit} className="w-full">
           <input
             className="bg-white text-black rounded p-2 mr-4 w-full px-4 "
