@@ -93,8 +93,8 @@ export default function Home() {
               <p className="text-sm">&copy; 2023 Test Management Department. All Rights Reserved.</p>
             </footer>
           </div>
-          <div className='relative'>
-            <div className="flex justify-center my-4">
+          <div className='flex justify-between'>
+            <div className="flex">
               <button
                 className={`bg-white text-black rounded px-4 py-2 mr-2 ${currentPage === 0 ? 'opacity-40' : 'opacity-100'}`}
                 onClick={() => setCurrentPage((currentPage - 1))}
@@ -124,7 +124,7 @@ export default function Home() {
               </div>
             )}
             <button
-              className="bg-red-500 text-white rounded px-4 py-2 absolute right-0 bottom-0"
+              className="bg-red-500 text-white rounded px-4 py-2"
               onClick={handleDelete}
             >
               Delete Name

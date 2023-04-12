@@ -114,23 +114,24 @@ export default function Home() {
               <p className="text-sm">&copy; 2023 Test Management Department. All Rights Reserved.</p>
             </footer>
           </div>
-          <div className='relative'>
-            <div className="flex justify-center my-4">
-              <button
-                className={`bg-white text-black rounded px-4 py-2 mr-2 ${currentPage === 0 ? 'opacity-40' : 'opacity-100'}`}
-                onClick={() => setCurrentPage((currentPage - 1))}
-                disabled={currentPage === 0}
-              >
-                &larr;
-              </button>
-              <button
-                className={`bg-white text-black rounded px-4 py-2 ${currentPage === pages.length-1 ? 'opacity-40' : 'opacity-100'}`}
-                onClick={() => setCurrentPage((currentPage + 1))}
-                disabled={currentPage === pages.length-1}
-              >
-                &rarr;
-              </button>
+          <div className='flex justify-between'>
+            <div className="flex">
+            <button
+              className={`bg-white text-black rounded px-4 py-2 mr-2 ${currentPage === 0 ? 'opacity-40' : 'opacity-100'}`}
+              onClick={() => setCurrentPage((currentPage - 1))}
+              disabled={currentPage === 0}
+            >
+              &larr;
+            </button>
+            <button
+              className={`bg-white text-black rounded px-4 py-2 ${currentPage === pages.length-1 ? 'opacity-40' : 'opacity-100'}`}
+              onClick={() => setCurrentPage((currentPage + 1))}
+              disabled={currentPage === pages.length-1}
+            >
+              &rarr;
+            </button>
             </div>
+            
             {showDeleteModal && (
               <div className="fixed inset-0 z-50 flex items-center justify-center">
                 <div className={`bg-white p-6 rounded shadow-lg text-black ${modalDissolve ? 'dissolveModal show' : 'dissolveModal'}`}>
@@ -145,7 +146,7 @@ export default function Home() {
               </div>
             )}
             <button
-              className="bg-red-500 text-white rounded px-4 py-2 absolute right-0 bottom-0"
+              className="bg-red-500 text-white rounded px-4 py-2"
               onClick={handleDelete}
             >
               Delete Name
