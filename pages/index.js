@@ -18,6 +18,8 @@ export default function Welcome() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const secretName = process.env.NEXT_PUBLIC_SECRET_NAME; // Replace with the actual secret name
+    console.log(secretName);
     const trimmedName = name.trim();
     if (trimmedName.length === 0) {
       alert('Please enter a valid name.');
