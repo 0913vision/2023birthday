@@ -1,26 +1,36 @@
 export default function Home() {
   return (
-    <main>
-      <div id="jb-container">
-        <div id="jb-header">
-          <h1>Responsive Layout</h1>
-        </div>
-        <div id="jb-content">
-          <h2>Content</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec mollis nulla. Phasellus lacinia tempus mauris eu laoreet. Proin gravida velit dictum dui consequat malesuada. Aenean et nibh eu purus scelerisque aliquet nec non justo. Aliquam vitae aliquet ipsum. Etiam condimentum varius purus ut ultricies. Mauris id odio pretium, sollicitudin sapien eget, adipiscing risus.</p>
-        </div>
-        <div id="jb-sidebar">
-          <h2>Sidebar</h2>
-          <ul>
-            <li>Lorem</li>
-            <li>Ipsum</li>
-            <li>Dolor</li>
-          </ul>
-        </div>
-        <div id="jb-footer">
-          <p>Copyright</p>
+    <>
+      <Head>
+        <title>Your Page Title</title>
+      </Head>
+      <div className="bg-gray-900 text-white min-h-screen">
+        <div className="container mx-auto px-4">
+          {/* Section 1: Title */}
+          <div className="border-2 border-white p-4 my-4">
+            <h1 className="text-3xl">Section Title</h1>
+          </div>
+
+          {/* Section 2: Name */}
+          <div className="border-2 border-white p-4 my-4">
+            <h2 className="text-2xl">Hello, [Your Name]!</h2>
+          </div>
+
+          {/* Section 3: Context */}
+          <div className="border-2 border-white p-4 my-4">
+            <p className="text-lg">
+              This is the context section where you can write your content. You can add any text, images, or other elements here.
+            </p>
+          </div>
+
+          {/* Section 4: Footer */}
+          <div className="border-2 border-white p-4 my-4">
+            <footer>
+              <p>&copy; 2023 Your Company Name. All Rights Reserved.</p>
+            </footer>
+          </div>
         </div>
       </div>
-    </main>
+    </>
   )
 }
