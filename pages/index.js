@@ -33,6 +33,7 @@ export default function Welcome() {
 
   const handleConfirm = () => {
     const secretName = process.env.NEXT_PUBLIC_SECRET_NAME; // Replace with the actual secret name
+    console.log(secretName);
 
     // Save the name in the browser's localStorage
     localStorage.setItem('userName', name);
