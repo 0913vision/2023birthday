@@ -11,9 +11,15 @@ export default function Home() {
   useEffect(() => {
     // Get the user's name from the browser's localStorage
     const name = localStorage.getItem('userName');
+    const secretName = process.env.NEXT_PUBLIC_SECRET_NAME;
     if (name) {
-      setUserName(name);
-      setDissolve(true);
+      if(name && name === secretName ) {
+        router.push('/secret_home_0415');
+      }
+      else {
+        setUserName(name);
+        setDissolve(true);
+      }
     }
     else {
       router.push('/');
