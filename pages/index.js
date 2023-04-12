@@ -1,9 +1,6 @@
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Your Page Title</title>
-      </Head>
       <div className="bg-gray-900 text-white min-h-screen">
         <div className="container mx-auto px-4">
           {/* Section 1: Title */}
