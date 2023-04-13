@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
+import present2Image from "../public/present2.jpg"
+import encryptedImage from "../public/encrypted.jpg"
 
 export default function Home() {
   const [userName, setUserName] = useState('');
@@ -22,61 +25,57 @@ export default function Home() {
 
   const pages = [
     {
-      title: '[SECRET] : From Korea branch',
+      title: '알려드립니다.',
       content: (<div>
-        <div className='xs'>[The email below was sent from the Korea branch. Please check it and translate it into English for the administrator.]</div>
-        <br/>
-        안녕하세요, 한국 시험 담당자입니다.
-        <br/><br/>
-        금번 한국 시험 변동사항에 대해 알려드립니다.
-        <br/><br/>
-        저희는 이번에 시험을 실시하지 않기로 하였습니다. 하지만, 이 사실이 외부에 공개되면 신청자들의 문의가 폭주할 것이므로 저희는 정상적으로 시험을 진행한다고 4월 12일 저녁에 공표할 예정입니다. 이번에 준비된 시험지와 해당 문제들은 다음 시험에 사용하도록 하겠습니다. 시험지는 곧 올려드리겠습니다.
-        <br/><br/>
-        어제 저녁에 본사에서 파견오신 <b><i>--Censored--</i></b>님께서도 이번 일에 동의해주셨습니다. 본사의 협조에 감사합니다.
-        <br/><br/>
-        참고로, 최근 내부에서 이번 결정에 대해 불만을 품은 사람들이 생기고 있으니, 내부 자료 보안에 각별히 신경써주시기 바랍니다.
-        <br/><br/>
-        담당자 <b><i>--Censored--</i></b>드림.
+          이 링크도 곧 사라질 수 있을 것 같습니다. 다음 두 장의 사진에 필요한 정보를 담았습니다.
+          <br/><br/>
+          첫번째 사진은 마지막 전달 메시지입니다. 두번째 사진은 색이 입혀진 내부 자료가 필요할 것 같아 첨부해드립니다.
+          <br/><br/>
+          하루정도는 이 자료를 유지하도록 하겠습니다.
+          <br/><br/>
+          여기로 오실 때 확인한 이메일에 IM■■E_1에 대한 정보를 담았습니다.
         </div>
       )
     },
     {
-      title: '[SECRET] : [TRANSLATED] From Korea branch',
+      title: 'IMAGE_1',
       content: (<div>
-        Hello, this is the Korean exam coordinator.
-        <br/><br/>
-        We would like to inform you about the changes in the Korean exam this time.
-        <br/><br/>
-        We have decided not to hold the exam this time. However, since disclosing this fact to the public will lead to an overwhelming number of inquiries from applicants, we plan to announce that the exam will proceed as usual on the evening of April 12th. The prepared test papers and their respective questions will be used in the next exam. We will upload the test papers shortly.
-        <br/><br/>
-        <b><i>--Censored--</i></b>, who was dispatched from the headquarters last night, also agreed on this matter. We appreciate the cooperation of the headquarters.
-        <br/><br/>
-        Please note that there have been some people who are discontent with this decision within the organization recently, so please pay special attention to the security of internal documents.
-        <br/><br/>
-        From coordinator <b><i>--Censored--</i></b>.
+          <div className='content-center'>
+            <Image
+              src={encryptedImage}
+              width={390}
+              height={0}
+              alt="encrypted image"
+            />
+          </div>
         </div>
       )
     },
     {
-      title: '안녕하세요, 이서연님.',
+      title: 'IMAGE_2',
       content: (<div>
-        안녕하세요, 이서연님.
-        <br/><br/>
-        제가 보내드린 여러 유출 문서와 비밀 코드를 해독하셨군요. 감사드립니다.
-        <br/><br/>
-        앞에서 보셨듯이, 본사와 지사는 이번 시험을 진행하지 않으려고 합니다. 하지만 저는 이것을 원하지 않기에, 서연님께 따로 이 사실을 공유드리려고 지금까지 이메일 전송과 내부 홈페이지 해킹 등을 통해 서연님께 이 사실을 알리고자 하였습니다.
-        <br/><br/>
-        이번에 볼 시험지는 곧 이곳에 올려드리겠습니다. 일단 시험에 응시하시면 시험은 원칙대로 진행되기에, 한국 지사측에서도 이를 막을 별도의 방법이 없습니다.
-        <br/><br/>
-        서버 데이터의 한계로 더 이상 내용을 적기 어려울 것 같습니다. 이 링크는 몇 시간 후 없어지게 됩니다. 조만간 이메일을 통해 다른 링크를 보내드리도록 하겠습니다. 비슷한 방법으로 암호를 풀고 들어오시면 됩니다.
-        <br/><br/>
-        서연님의 행운을 빕니다.
-        <br/><br/>
-        익명으로부터.
+          <div className='content-center'>
+            <Image
+              src={present2Image}
+              width={390}
+              height={0}
+              alt="present image"
+            />
+          </div>
         </div>
       )
     },
-
+    {
+      title: '감사합니다.',
+      content: (<div>
+          이것으로 통신을 마칩니다. 시험은 저와 뜻을 함께한 내부 요원(코드명 KYC)을 통해 서면으로 보내드리겠습니다.
+          <br/><br/>
+          행운을 빕니다.
+          <br/><br/><br/>
+          익명으로부터.
+        </div>
+      )
+    },
   ];
 
   const [currentPage, setCurrentPage] = useState(0);
