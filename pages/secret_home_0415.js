@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 export default function Home() {
   const [userName, setUserName] = useState('');
@@ -52,6 +53,19 @@ export default function Home() {
         Thank you.
         <br/><br/>
         Test Management Department.
+      </div>)
+    },
+    {
+      title: 'Notice #2 : Gift image (example)',
+      content: (<div>
+        <div className='content-center'>
+          <Image
+            src="/images/present.jpg"
+            width={390}
+            height={0}
+            alt="present image"
+          />
+        </div>
       </div>)
     },
   ];
