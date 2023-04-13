@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import presentImage from '/public/present.jpg'
 
 export default function Home() {
   const [userName, setUserName] = useState('');
@@ -60,7 +61,7 @@ export default function Home() {
       content: (<div>
         <div className='content-center'>
           <Image
-            src="/images/present.jpg"
+            src={presentImage}
             width={390}
             height={0}
             alt="present image"
