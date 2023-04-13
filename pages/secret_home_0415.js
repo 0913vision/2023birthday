@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import presentImage from '/public/present.jpg'
+import presentImage from '../public/present.jpg'
 
 export default function Home() {
   const [userName, setUserName] = useState('');
